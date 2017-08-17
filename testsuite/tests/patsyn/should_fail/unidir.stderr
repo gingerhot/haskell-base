@@ -1,0 +1,5 @@
+
+unidir.hs:4:18: error:
+    Invalid right-hand side of bidirectional pattern synonym ‘Head’:
+      pattern ‘_’ is not invertible
+    RHS pattern: x : _

@@ -1,0 +1,40 @@
+TYPE SIGNATURES
+  test1 ::
+    forall (f :: * -> *). Applicative f => (Int -> f Int) -> f Int
+  test1a ::
+    forall (f :: * -> *). Applicative f => (Int -> f Int) -> f Int
+  test2 ::
+    forall (f :: * -> *) t b.
+    (Num b, Num t, Applicative f) =>
+    (t -> f b) -> f b
+  test2a ::
+    forall (f :: * -> *) t b.
+    (Num b, Num t, Functor f) =>
+    (t -> f b) -> f b
+  test2b ::
+    forall (m :: * -> *) t a. (Num t, Monad m) => (t -> a) -> m a
+  test2c ::
+    forall (f :: * -> *) t b.
+    (Num b, Num t, Functor f) =>
+    (t -> f b) -> f b
+  test3 ::
+    forall (m :: * -> *) t1 t2 a.
+    (Num t1, Monad m) =>
+    (t1 -> m t2) -> (t2 -> t2 -> m a) -> m a
+  test4 ::
+    forall (m :: * -> *) t a1 a2.
+    (Num t, Monad m) =>
+    (t -> m a1) -> (a1 -> a1 -> m a2) -> m a2
+  test5 ::
+    forall (m :: * -> *) t a1 a2.
+    (Num t, Monad m) =>
+    (t -> m a1) -> (a1 -> a1 -> m a2) -> m a2
+  test6 ::
+    forall (m :: * -> *) a p.
+    (Num (m a), Monad m) =>
+    (m a -> m (m a)) -> p -> m a
+TYPE CONSTRUCTORS
+COERCION AXIOMS
+Dependent modules: []
+Dependent packages: [base-4.10.0.0, ghc-prim-0.5.1.0,
+                     integer-gmp-1.0.0.1]
